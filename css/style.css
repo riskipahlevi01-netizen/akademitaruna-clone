@@ -1,0 +1,199 @@
+/* Menu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main navigation menu */
+.elementor-nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    justify-content: flex-start;
+}
+
+.elementor-nav-menu > li {
+    position: relative;
+}
+
+.elementor-nav-menu > li > a.elementor-item {
+    display: block;
+    padding: 24px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000; /* Text color changed to black */
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+/* Hover effect for main menu items */
+.elementor-nav-menu > li:hover > a.elementor-item,
+.elementor-nav-menu > li > a.elementor-item.elementor-item-active {
+    color: #f36f21; /* Accent color (orange) for hover */
+}
+
+/* DROPDOWN MENU STYLING */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 72px;  /* Position submenu below the menu */
+    left: 0;  /* Align submenu to the left of its parent */
+    min-width: 220px;
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+    background: #ffffff; /* White background for dropdown */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+}
+
+/* Show dropdown when hovering over parent menu item */
+.elementor-nav-menu li:hover > .sub-menu {
+    display: block;
+}
+
+/* Sub-menu item styling */
+.sub-menu > li > a.elementor-sub-item {
+    display: block;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000; /* Text color for sub-menu items */
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background .15s ease, color .15s ease;
+}
+
+/* Hover effect for sub-menu items */
+.sub-menu > li:hover > a.elementor-sub-item {
+    background: #e0e0e0;  /* Light grey background on hover */
+    color: #f36f21; /* Orange color on hover */
+}
+
+/* Special "Info Kampus" menu */
+.elementor-nav-menu li.menu-item-has-children > a {
+    font-weight: bold;
+}
+
+/* Dropdown menu for "Info Kampus" */
+.elementor-nav-menu li.menu-item-has-children > .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    min-width: 320px;
+    background: #ffffff; /* White background for Info Kampus */
+    box-shadow: 0 8px 24px rgba(0, 0, 255, 0.2); /* Blue shadow when dropdown is open */
+}
+
+.elementor-nav-menu li.menu-item-has-children > .sub-menu > li > a.elementor-sub-item {
+    color: #000000; /* Black text color for Info Kampus dropdown */
+}
+
+.elementor-nav-menu li.menu-item-has-children > .sub-menu > li:hover > a.elementor-sub-item {
+    text-decoration: underline;
+    background: transparent;
+    color: #f36f21;
+}
+
+/* Button for "Daftar" */
+button.daftar-button {
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.daftar-button:hover {
+    background-color: #FF6500;
+}
+
+/* Start of Responsive Styles (Mobile) */
+@media (max-width: 768px) {
+
+    /* Hide the normal menu and show hamburger icon */
+    .elementor-nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Adjust this based on your layout */
+        left: 0;
+        background: white;
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    /* Display the hamburger menu toggle button */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Style for each hamburger icon bar */
+    .menu-icon {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        border-radius: 2px;
+    }
+
+    /* Show menu when the toggle button is clicked */
+    .elementor-nav-menu.open {
+        display: flex;
+    }
+
+    /* Sub-menu styles for mobile */
+    .sub-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .elementor-nav-menu > li.menu-item-has-children > .sub-menu {
+        display: none;
+    }
+
+    /* Show sub-menu when menu item is clicked on mobile */
+    .elementor-nav-menu > li.menu-item-has-children.open > .sub-menu {
+        display: block;
+    }
+
+    .elementor-nav-menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .elementor-nav-menu > li > a.elementor-item {
+        padding: 16px 0;
+        font-size: 18px;
+    }
+
+    /* Make sure the dropdown sub-menus are clickable */
+    .elementor-nav-menu > li.menu-item-has-children > a {
+        cursor: pointer;
+    }
+
+    /* Style the mobile close button */
+    .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+/*  */

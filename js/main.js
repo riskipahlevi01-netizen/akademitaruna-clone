@@ -34,11 +34,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (pathname.includes("/blogs/detail/")) {
       return "../../../";
     }
+    if (pathname.includes("/info/")) {
+      return "../../";
+    }
 
     if (pathname.includes("/tentang-kami") ||
-        pathname.includes("/bimbel-akmil") ||
-        pathname.includes("/blogs") ||
-        pathname.includes("/kontak-kami")) {
+      pathname.includes("/bimbel-akmil") ||
+      pathname.includes("/blogs") ||
+      pathname.includes("/kontak-kami")) {
       return "..";
     }
 
@@ -52,31 +55,31 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const toggleTitles = document.querySelectorAll('.elementor-tab-title');
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleTitles = document.querySelectorAll('.elementor-tab-title');
 
-    toggleTitles.forEach(function(title) {
-      title.addEventListener('click', function() {
-        const contentId = title.getAttribute('aria-controls');
-        const content = document.getElementById(contentId);
-        const expanded = title.getAttribute('aria-expanded') === 'true';
+  toggleTitles.forEach(function (title) {
+    title.addEventListener('click', function () {
+      const contentId = title.getAttribute('aria-controls');
+      const content = document.getElementById(contentId);
+      const expanded = title.getAttribute('aria-expanded') === 'true';
 
-        // Toggle visibility
-        content.style.display = expanded ? 'none' : 'block';
-        title.setAttribute('aria-expanded', !expanded);
+      // Toggle visibility
+      content.style.display = expanded ? 'none' : 'block';
+      title.setAttribute('aria-expanded', !expanded);
 
-        // Toggle icons
-        const toggleIcon = title.querySelector('.elementor-toggle-icon');
-        if (expanded) {
-          toggleIcon.classList.remove('elementor-toggle-icon-opened');
-          toggleIcon.classList.add('elementor-toggle-icon-closed');
-        } else {
-          toggleIcon.classList.remove('elementor-toggle-icon-closed');
-          toggleIcon.classList.add('elementor-toggle-icon-opened');
-        }
-      });
+      // Toggle icons
+      const toggleIcon = title.querySelector('.elementor-toggle-icon');
+      if (expanded) {
+        toggleIcon.classList.remove('elementor-toggle-icon-opened');
+        toggleIcon.classList.add('elementor-toggle-icon-closed');
+      } else {
+        toggleIcon.classList.remove('elementor-toggle-icon-closed');
+        toggleIcon.classList.add('elementor-toggle-icon-opened');
+      }
     });
   });
+});
 
 
 

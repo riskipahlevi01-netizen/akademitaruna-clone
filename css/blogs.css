@@ -1,0 +1,233 @@
+/* General */
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.custom-section {
+padding: 40px 0;
+background: #fff;
+}
+
+.blog-container {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* Grid 3 kolom */
+.blog-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+/* Item /
+.blog-item {
+/ pastikan tidak ikut aturan .col atau .column dari tema */
+/* margin: 0; */
+/* padding: 0; */
+/* } */
+
+/* Card */
+.post-card {
+background: #fff;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+transform: translateY(-3px);
+}
+
+.post-card img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.post-content {
+padding: 15px;
+}
+
+.post-title {
+font-size: 1.1rem;
+font-weight: bold;
+margin-bottom: 10px;
+color: #000;
+}
+
+.post-title a {
+color: inherit;
+text-decoration: none;
+}
+
+.post-meta {
+display: flex;
+justify-content: space-between;
+font-size: 0.9rem;
+color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.blog-grid {
+grid-template-columns: 1fr;
+}
+}
+
+/* banner */
+
+/* Mengecilkan tinggi section judul blog */
+.blog-header-section {
+  padding: 1px !important;   /* sebelumnya Elementor sering pakai padding besar */
+  min-height: 1px !important;  /* hilangkan tinggi minimum bawaan */
+}
+
+/* Sedikit rapikan heading */
+.blog-header-section .elementor-heading-title {
+  margin: 0;
+  font-size: 2rem;              /* boleh dikecilkan / dibesarkan sesuai selera */
+}
+
+
+/* WRAPPER UTAMA: artikel kiri, sidebar kanan */
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;       /* tengah di halaman */
+  padding: 0 20px;
+}
+
+/* ARTIKEL UTAMA (kiri) */
+.article-main {
+  flex: 3;                 /* lebih lebar dari sidebar */
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* gambar utama artikel */
+.featured-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* SIDEBAR "Artikel Terbaru" (kanan) */
+.recent-articles {
+  flex: 1;
+  max-width: 350px;        /* kira-kira seperti di gambar */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 100px;              /* nempel saat di-scroll */
+}
+
+/* Judul sidebar */
+.recent-articles-header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* LIST ARTIKEL DI SIDEBAR */
+.recent-articles-list .article {
+  margin-bottom: 20px;
+}
+
+.article-link {
+  display: flex;
+  text-decoration: none;
+  color: #333;
+}
+
+.article-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.article-image {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 12px;
+  border-radius: 5px;
+}
+
+.article-content p {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE: kalau layar kecil, tumpuk jadi 1 kolom */
+@media (max-width: 992px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .recent-articles {
+    position: static;      /* hilangkan sticky di mobile */
+    max-width: 100%;
+  }
+}
+
+
+/* tabel */
+
+/* Wrapper opsional biar tabel bisa di-scroll di layar kecil */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Tabel utama */
+table.has-fixed-layout {
+  width: 100%;
+  border-collapse: collapse;   /* gabung garis border */
+  table-layout: fixed;         /* lebar kolom lebih konsisten */
+  font-size: 14px;
+}
+
+/* Sel header & isi */
+table.has-fixed-layout th,
+table.has-fixed-layout td {
+  border: 1px solid #ddd;      /* garis abu-abu tipis */
+  padding: 8px 10px;           /* jarak dalam sel */
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* Header */
+table.has-fixed-layout th {
+  background-color: #f2f2f2;   /* abu-abu muda */
+  font-weight: 600;
+}
+
+/* Zebra row */
+table.has-fixed-layout tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover efek */
+table.has-fixed-layout tr:hover {
+  background-color: #eef5ff;
+}

@@ -87,10 +87,10 @@ grid-template-columns: 1fr;
   min-height: 1px !important;  /* hilangkan tinggi minimum bawaan */
 }
 
-/* Sedikit rapikan heading */
+
 .blog-header-section .elementor-heading-title {
   margin: 0;
-  font-size: 2rem;              /* boleh dikecilkan / dibesarkan sesuai selera */
+  font-size: 2rem;            
 }
 
 

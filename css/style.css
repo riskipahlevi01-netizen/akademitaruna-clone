@@ -1,4 +1,4 @@
-/* Menu */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,28 +9,24 @@
 .elementor-nav-menu {
     list-style: none;
     display: flex;
-    gap: 32px;
-    justify-content: flex-start;
+    gap: 2px;
+    justify-content: flex-start;    
 }
 
 .elementor-nav-menu > li {
     position: relative;
+    margin: 0;
 }
 
+/* Main menu item styling (No hover effect) */
 .elementor-nav-menu > li > a.elementor-item {
     display: block;
-    padding: 24px 0;
+    /* padding: 24px 0px; */
     font-size: 16px;
     font-weight: 500;
     color: #000000; /* Text color changed to black */
     text-decoration: none;
-    transition: color .2s ease;
-}
-
-/* Hover effect for main menu items */
-.elementor-nav-menu > li:hover > a.elementor-item,
-.elementor-nav-menu > li > a.elementor-item.elementor-item-active {
-    color: #f36f21; /* Accent color (orange) for hover */
+    /* No transition or hover effect */
 }
 
 /* DROPDOWN MENU STYLING */
@@ -87,7 +83,7 @@
 }
 
 .elementor-nav-menu li.menu-item-has-children > .sub-menu > li > a.elementor-sub-item {
-    color: #000000; /* Black text color for Info Kampus dropdown */
+    color: #000000;
 }
 
 .elementor-nav-menu li.menu-item-has-children > .sub-menu > li:hover > a.elementor-sub-item {
@@ -174,8 +170,7 @@ button.daftar-button:hover {
     }
 
     .elementor-nav-menu > li > a.elementor-item {
-        padding: 16px 0;
-        font-size: 18px;
+        transition: color 0.3s ease, transform 0.3s ease;  /* Transisi warna tetap ada pada mobile */
     }
 
     /* Make sure the dropdown sub-menus are clickable */
@@ -196,4 +191,3 @@ button.daftar-button:hover {
     }
 }
 
-/*  */

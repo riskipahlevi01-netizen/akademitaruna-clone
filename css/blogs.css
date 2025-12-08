@@ -1,10 +1,10 @@
 /* General */
 
-{
+/* {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-}
+} */
 
 .custom-section {
 padding: 40px 0;
@@ -87,10 +87,10 @@ grid-template-columns: 1fr;
   min-height: 1px !important;  /* hilangkan tinggi minimum bawaan */
 }
 
-
+/* Sedikit rapikan heading */
 .blog-header-section .elementor-heading-title {
   margin: 0;
-  font-size: 2rem;            
+  font-size: 2rem;              /* boleh dikecilkan / dibesarkan sesuai selera */
 }
 
 
@@ -230,4 +230,62 @@ table.has-fixed-layout tr:nth-child(even) {
 /* Hover efek */
 table.has-fixed-layout tr:hover {
   background-color: #eef5ff;
+}
+
+/* CSS untuk Section Hero */
+.hero-section {
+    /* Style untuk section hero Anda */
+    padding: 50px 0;  /* Sesuaikan padding sesuai kebutuhan */
+    background-color: #f8f9fa;  /* Sesuaikan warna latar belakang */
+}
+
+/* Container untuk Blog Grid */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centering the container */
+}
+
+/* Margin antara section hero dan blog grid */
+.blog-grid {
+    margin-top: 30px; /* Memberikan jarak antara hero section dan blog grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Jarak antar card */
+}
+
+/* Card style */
+.post-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Style gambar */
+.post-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Content */
+.post-content {
+    padding: 15px;
+}
+
+/* Title and Meta */
+.post-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #888;
+}
+
+.post-date {
+    margin-right: 15px;
 }

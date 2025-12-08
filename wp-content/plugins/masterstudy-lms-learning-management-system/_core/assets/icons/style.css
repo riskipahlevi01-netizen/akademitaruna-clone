@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'stmlms';
-  src:  url('fonts/stmlms.eot?29xum1');
-  src:  url('fonts/stmlms.eot?29xum1#iefix') format('embedded-opentype'),
-    url('fonts/stmlms.ttf?29xum1') format('truetype'),
-    url('fonts/stmlms.woff?29xum1') format('woff'),
-    url('fonts/stmlms.svg?29xum1#stmlms') format('svg');
+  src:  url('fonts/stmlms.eot?ly8xip');
+  src:  url('fonts/stmlms.eot?ly8xip#iefix') format('embedded-opentype'),
+    url('fonts/stmlms.ttf?ly8xip') format('truetype'),
+    url('fonts/stmlms.woff?ly8xip') format('woff'),
+    url('fonts/stmlms.svg?ly8xip#stmlms') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.stmlms-dashicons-book:before {
+  content: "\ea1f";
+  color: #4d5e6f;
+}
+.stmlms-categories-old:before {
+  content: "\ea29";
+}
+.stmlms-categories:before {
+  content: "\ea2c";
+}
 .stmlms-lms_locked:before {
   content: "\ea1e";
 }

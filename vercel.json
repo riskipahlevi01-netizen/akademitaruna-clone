@@ -5,8 +5,8 @@
       "destination": "/blogs/detail/:slug.html"
     },
     {
-      "source": "/info/:slug",  
-      "destination": "/info/:slug.html"
+      "source": "/:slug",  
+      "destination": "/:slug.html"
     }
   ]
 }

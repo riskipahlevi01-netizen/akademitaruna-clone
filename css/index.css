@@ -4253,3 +4253,93 @@ svg {
 .elementor-template-full-width .site-footer-widgets .container {
     max-width: 1140px;
 }
+
+/*  */
+
+/* General Section Styling */
+.custom-section {
+    padding: 30px 0;
+    background-color: #003366; /* Deep blue background */
+}
+
+.custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Flexbox for the Container */
+.custom-inner-column {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Column Styling */
+.custom-column {
+    flex: 1; /* Equal width for each column */
+    background-color: #004080; /* Light blue for each column */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on columns */
+.custom-column:hover {
+    transform: translateY(-10px);
+}
+
+/* Image Box Styling */
+.custom-image-box-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+/* Title Styling */
+.custom-image-box-title {
+    font-size: 1.5em;
+    color: #f1c40f; /* Golden yellow for the titles */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Divider Styling */
+.custom-divider-separator {
+    width: 40px;
+    margin: 10px auto;
+    border-top: 2px solid #f1c40f;
+}
+
+/* Text Content Styling */
+.custom-widget-text-editor p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .custom-inner-column {
+        flex-direction: column; /* Stack the columns for medium screens */
+    }
+
+    .custom-column {
+        flex: 1 1 100%; /* Ensure the columns take full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-image-box-title {
+        font-size: 1.2em;
+    }
+
+    .custom-widget-text-editor p {
+        font-size: 0.95em;
+    }
+}
